@@ -1,4 +1,6 @@
 <?php
+	
+//****This is what would work for my localhost on personal computer not hosting account****
 
 	/* Connects your PHP application to a database. Allows them to comminicate  */
 	
