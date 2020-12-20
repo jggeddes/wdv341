@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Johnson's Clothing Store</title>
+
+	<!--Author: Justina Geddes
+	Date: December 8th 2020-->
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="about johnsons clothing store">
+	<meta name="keywords" content="clothes, johnson's clothing, store, cheap prices'">
+
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	
+<link rel="stylesheet" type="text/css" href="css/jcClothing">
+	
+	<style>
+		.row {
+			padding: 20px;
+			}
+		.row img {
+			height: 250px;
+			}
+  
+		.foot a {
+			color:white;
+			}
+		.center {
+			text-align:center;
+			padding:20px;
+			}
+	</style>
+
+</head>
+<body>
+
+
+<div class="container">
+	<div class="jumbotron text-center"  style="margin-bottom:0; color:white; background-color:navy;">
+	 	<h1>Johnson's Clothing Store</h1>
+	</div>
+
+	
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="home.html"> 
+  		<img src="images/FClogo.gif" alt="logo" style="width:40px;">
+  </a>
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="products.html">Shop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactUs.php">Contact Us</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="login.php">Login</a>
+      </li> 
+    </ul>
+<!--<form class="form-inline my-2 my-lg-0">
+    	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+   		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  	</form>
+-->
+  </div> 
+</nav>  
+
+<div class="center">
+	<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/audultBoots.jpeg" class="card-img-top" alt="Adult Boots">
+      <div class="card-body">
+        <h5 class="card-title">Adult Rain Boot - $15</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QZKSSTFTD4URG">
+<table>
+<tr><td><input type="hidden" name="on0" value="Color">Color</td></tr><tr><td><select name="os0">
+	<option value="Red">Red </option>
+	<option value="White">White </option>
+	<option value="Yellow">Yellow </option>
+	<option value="Black">Black </option>
+	<option value="Blue">Blue </option>
+</select> </td></tr>
+<tr><td><input type="hidden" name="on1" value="Size">Size</td></tr><tr><td><select name="os1">
+	<option value="7">7 </option>
+	<option value="8">8 </option>
+	<option value="9">9 </option>
+	<option value="10">10 </option>
+	<option value="11">11 </option>
+	<option value="12">12 </option>
+</select> </td></tr>
+</table>
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/teenBoots.jpeg" class="card-img-top" alt="Teen Boots">
+      <div class="card-body">
+        <h5 class="card-title">Teen Ugg Boots - $12</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="39EL89EF6MHU4">
+<table>
+<tr><td><input type="hidden" name="on0" value="Size">Size</td></tr><tr><td><select name="os0">
+	<option value="5">5 </option>
+	<option value="6">6 </option>
+	<option value="7">7 </option>
+	<option value="8">8 </option>
+	<option value="9">9 </option>
+</select> </td></tr>
+</table>
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/kidsBoots.jpeg" class="card-img-top" alt="Kids Boots">
+      <div class="card-body">
+        <h5 class="card-title">Boots For Boys & Girls - $10</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="YJ8KKLB8WKEJA">
+<table>
+<tr><td><input type="hidden" name="on0" value="Size">Size</td></tr><tr><td><select name="os0">
+	<option value="1">1 </option>
+	<option value="2">2 </option>
+	<option value="3">3 </option>
+	<option value="4">4 </option>
+	<option value="5">5 </option>
+	<option value="6">6 </option>
+</select> </td></tr>
+</table>
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/adultOutfit.jpeg" class="card-img-top" alt="Adult Outfit">
+      <div class="card-body">
+        <h5 class="card-title">Adult Outfit for Women - $20</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="3XTCWFPYPJDJS">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/teenOutfit.jpeg" class="card-img-top" alt="Teen Outfit">
+      <div class="card-body">
+        <h5 class="card-title">Teen Outfit for Women - $15</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="BQLFWCQ8NYWAU">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/kidOutfit.jpeg" class="card-img-top" alt="Kid Outfit">
+      <div class="card-body">
+        <h5 class="card-title">Boy Outfit - $10</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="7EKLCDLKYS2XA">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/menSuit.jpeg" class="card-img-top" alt="Men Suit">
+      <div class="card-body">
+        <h5 class="card-title">Men Suits - $30</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZWR2RYSW737H2">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/teensNice.jpeg" class="card-img-top" alt="Nice Outfit For Teens">
+      <div class="card-body">
+        <h5 class="card-title">Dude Nice Outfit - $18</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="FKM5QKS23AUFW">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/kidComfy.jpeg" class="card-img-top" alt="Girls Outfit">
+      <div class="card-body">
+        <h5 class="card-title">Girls Outfit - $15</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="8J9TD6DMVX29U">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/watch.jpeg" class="card-img-top" alt="Mens Watch">
+      <div class="card-body">
+        <h5 class="card-title">Mens Watch - $15</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="E8JPJEDAYSDV4">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/womenJewlrySet.jpeg" class="card-img-top" alt="Jewlry Set">
+      <div class="card-body">
+        <h5 class="card-title">Women's Jewelry Set - $28</h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="W2V2F4SEU7C7C">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card text-center" style="width: 18rem;">
+      <img src="images/kidsCoat.jpeg" class="card-img-top" alt="Kids Winter coat">
+      <div class="card-body">
+        <h5 class="card-title">Children Winter Coat - $12 </h5>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="VU6XTP95M7JKE">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="center">
+	<h2 style="margin-top: 60px;">We also have digital downloads available immediately after payment!</h2>
+
+    <h3 style="text-align: center;">What we offer</h3>
+    <h4>NOTE: All digital products are the same price at a $3 fee (plus Iowa Tax)</h4>
+	<h4>NOTE: Will not download automatically!!!</h4>
+	
+    <ul style="text-align: center; list-style-position: inside;">
+        <li>Winter Clothing Ideas (Word Document)</li>
+        <li>Winter Clothing Ideas (PDF Document)</li>
+        <li>An image of the most popular winter fashion trend of 2020</li>
+        <li>A file which contains the word document, pdf document, and image</li>
+    </ul>
+
+	
+	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="F7LGF7XG2DBMG">
+	<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+</div>
+
+
+<div class="jumbotron text-center" style="margin-bottom:0; background-color:Navy">
+  		
+  		<footer>	
+  			<div class="row">
+    			<div class="col-lg-4 col-md-6">
+      				<img src="images/FClogo.gif" alt="logo" style="width:250px;">
+      			</div>
+    
+    		<div class="col-lg-4 col-md-6" style="color:white;">
+      			<h3>900 S Ada St,</h3>
+      			<h3>Chicago, IL </h3>
+      			<h3>60607</h3>
+      		</div>
+    
+    		<div class="col-lg-4 col-md-6" style="color:white" >
+      			<p class="foot" style="margin-top: 50px; color:white; background-color:navy;">
+					<a href="#" class="fa fa-pinterest"></a>
+					<a href="#" class="fa fa-instagram"></a>
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+				</p>
+      		</div>
+
+</div><!--close div class row-->
+		</footer>	
+		
+		<div class="col-sm-12" style="margin-top: 20px; color:white; background-color:Navy; display: flex; justify-content: space-between;">
+<p class="foot">
+Johnson's Clothing Store <span>©Copyright 2020. All rights reserved.</span></p>
+</div>
+
+
+</div><!-- end of div with footer -->
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
